@@ -1,18 +1,23 @@
 package com.emedinaa.marvelapp.step6
 
+import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.emedinaa.marvelapp.Hero
 import com.emedinaa.marvelapp.R
+import com.emedinaa.marvelapp.adapter.GridItemDecorator
 import com.emedinaa.marvelapp.adapter.RecyclerClickListener
 import com.emedinaa.marvelapp.adapter.RecyclerTouchListener
+import com.emedinaa.marvelapp.step4.BaseActivity
 import com.emedinaa.marvelapp.step4.showToast
 import kotlinx.android.synthetic.main.activity_step6.*
 
-class Step6Activity : AppCompatActivity() {
+class Step6Activity : BaseActivity() {
 
     private lateinit var adapter: HeroAdapter
     private lateinit var provider: HeroProvider
@@ -26,6 +31,16 @@ class Step6Activity : AppCompatActivity() {
         adapter= HeroAdapter(emptyList())
         //recyclerView.layoutManager= LinearLayoutManager(this)
         recyclerView.layoutManager= GridLayoutManager(this,2)
+
+        /*val decorator= DividerItemDecoration(this,DividerItemDecoration.VERTICAL)
+
+        val drawable= ContextCompat.getDrawable(this,R.drawable.divider)
+        drawable?.let {
+            decorator.setDrawable(it)
+        }
+        recyclerView.addItemDecoration(decorator)*/
+        recyclerView.addItemDecoration(GridItemDecorator(this,4,2))
+
         recyclerView.adapter= adapter
 
         recyclerView.addOnItemTouchListener(RecyclerTouchListener(this,recyclerView,
@@ -54,6 +69,7 @@ class Step6Activity : AppCompatActivity() {
 
     private fun onResult():(data:DataResult<List<Hero>>)->Unit{
         return {
+            hideLoadingView()
             when(it){
                 is DataResult.Success ->
                     if(it.data.isEmpty()){
@@ -79,6 +95,15 @@ class Step6Activity : AppCompatActivity() {
             }
         }*/
 
+        showLoadingView()
         provider.retrieveHeroes(onResult())
+    }
+
+    private fun showLoadingView(){
+        layoutProgress.visibility=View.VISIBLE
+    }
+
+    private fun hideLoadingView(){
+        layoutProgress.visibility=View.GONE
     }
 }

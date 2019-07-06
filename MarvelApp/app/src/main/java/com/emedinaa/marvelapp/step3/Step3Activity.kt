@@ -14,20 +14,20 @@ class Step3Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_step3)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val layoutManager= LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
         recyclerView.layoutManager= layoutManager
 
         //load Data
-        //loadData()
+        //loadDataWithList()
+        loadDataWithMutableList()
 
-        loadDataWithList()
-
-        //loadByGender()
-        //loadByGender(1)
+        //loadDataByGender()
+        //loadDataByGender(1)
     }
 
-    private fun loadByGender(gender:Int=0){
+    private fun loadDataByGender(gender:Int=0){
         val filter:MutableList<HeroEntity> = mutableListOf()
         heroList.forEach {
             if(it.gender==gender){
@@ -39,7 +39,7 @@ class Step3Activity : AppCompatActivity() {
         recyclerView.adapter= adapter
     }
 
-    private fun loadData(){
+    private fun loadDataWithMutableList(){
         heroList.add(HeroEntity("IronMan",R.drawable.iron_man_box,1))
         heroList.add(HeroEntity("Scarlet Witch",R.drawable.scarlet_witch_box,0))
         heroList.add(HeroEntity("Doctor Strange",R.drawable.doctor_strange_box,1))
@@ -47,6 +47,7 @@ class Step3Activity : AppCompatActivity() {
         heroList.add(HeroEntity("Gamora",R.drawable.gamora_box,0))
         heroList.add(HeroEntity("Black Widow",R.drawable.black_widow_box,0))
 
+        //heroList.sortBy { it.name }
         val adapter= HeroHAdapter(heroList.toList())
         recyclerView.adapter= adapter
     }
@@ -59,5 +60,10 @@ class Step3Activity : AppCompatActivity() {
 
         val adapter= HeroHAdapter(data)
         recyclerView.adapter= adapter
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

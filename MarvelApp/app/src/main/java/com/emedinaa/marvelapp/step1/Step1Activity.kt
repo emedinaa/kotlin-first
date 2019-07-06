@@ -14,6 +14,7 @@ class Step1Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_step1)
+        //supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         imageView.visibility= View.VISIBLE
         button.setOnClickListener {
@@ -63,4 +64,9 @@ class Step1Activity : AppCompatActivity() {
         imageView.setImageDrawable(ContextCompat.getDrawable(this,image))
 
     }
+
+    /*override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }*/
 }
