@@ -2,7 +2,7 @@
 Codelab Kotlin - GDG Lima IO Extended Lima 2019
 
 
-|    
+Contenido| Screenshot 
 ------------ | ------------- 
 Slide : https://docs.google.com/presentation/d/1ASbryoETUm3Hgz4BERL45gzpOAdl_YdwVn0PIRgyV8E/edit?usp=sharing
 Sample: https://github.com/emedinaa/kotlin-first/archive/master.zip  | <img src="screenshots/MarvelApp.png" height="480">
