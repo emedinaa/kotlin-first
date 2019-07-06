@@ -2,7 +2,7 @@
 Codelab Kotlin - GDG Lima IO Extended Lima 2019
 
 
-<img src="screenshots/MarvelApp.jpg" height="480">
+<img src="screenshots/MarvelApp.png" height="480">
 
 ## Step 1
 <img src="screenshots/Step1.jpg" height="480">
@@ -25,10 +25,15 @@ Codelab Kotlin - GDG Lima IO Extended Lima 2019
 # References
 
 Página oficial https://kotlinlang.org/
+
 Documentación https://kotlinlang.org/docs/reference/
+
 Compilador online https://play.kotlinlang.org/
+
 Android Codelabs https://codelabs.developers.google.com/?cat=Android 
+
 Github repositories https://github.com/search?q=language:Kotlin
+
 Training :
 - Kotlin for Android Developers https://es.coursera.org/learn/kotlin-for-java-developers
 - Kotlin for Android Developers  https://www.udacity.com/course/kotlin-for-android-developers
