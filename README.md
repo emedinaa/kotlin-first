@@ -14,8 +14,7 @@ Codelab Kotlin - GDG Lima IO Extended Lima 2019
 <img src="screenshots/Step3.jpg" height="480">
 
 ## step 4
-<img src="screenshots/Step4.jpg" height="480">
-<img src="screenshots/Step4_2.jpg" height="480">
+<img src="screenshots/Step4.jpg" height="480"> <img src="screenshots/Step4_2.jpg" height="480">
 
 ## Step 5
 <img src="screenshots/Step5.jpg" height="480">
