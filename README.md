@@ -1,6 +1,9 @@
 # kotlin-first
 Codelab Kotlin - GDG Lima IO Extended Lima 2019
 
+Slide : https://docs.google.com/presentation/d/1ASbryoETUm3Hgz4BERL45gzpOAdl_YdwVn0PIRgyV8E/edit?usp=sharing
+
+Sample: https://github.com/emedinaa/kotlin-first/archive/master.zip
 
 <img src="screenshots/MarvelApp.png" height="480">
 
@@ -14,7 +17,7 @@ Codelab Kotlin - GDG Lima IO Extended Lima 2019
 <img src="screenshots/Step3.jpg" height="480">
 
 ## step 4
-<img src="screenshots/Step4.jpg" height="480">
+<img src="screenshots/Step4.jpg" height="480"> <img src="screenshots/Step4_2.jpg" height="480">
 
 ## Step 5
 <img src="screenshots/Step5.jpg" height="480">
